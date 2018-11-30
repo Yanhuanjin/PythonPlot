@@ -14,8 +14,8 @@ while True:
         values.append(float(point))
 
 for value in values:
-    for i in range(2):
-        points.append(value)
+    for i in range(2):              # 增加一组平行的数据点集合，绘制横线段而不是单纯描点
+        points.append(value)    
 
 plt.xlabel('Reaction Coordinate')
 plt.ylabel('Energy')

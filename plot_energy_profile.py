@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
-values = []
-points = []
+values = []   # 输入数据列表
+points = []   # 处理数据列表
 n = 1
 while True:
     print('Please input Point-%d:' %(n))

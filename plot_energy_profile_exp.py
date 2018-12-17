@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import pylab as pl
 
 """Expert version"""
 
@@ -23,8 +24,11 @@ group_1 = plot_line(points_1)
 group_2 = plot_line(points_2)
 group_3 = plot_line(points_3)
 
+
 # points plot
 plt.plot(group_1, ':r',label="a")
 plt.plot(group_2, '-g',label="b")
 plt.plot(group_3, '-.b',label="c")
+pl.legend()
+
 plt.show()   

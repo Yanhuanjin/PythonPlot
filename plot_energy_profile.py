@@ -39,5 +39,5 @@ for i in line_group:
         print('>> group '+ str(i+1) + " \n")
         line_group[i] = plot_input()
         all_points[i] = plot_line(line_group[i])
-        plt.plot(range(len(all_points[i])), all_points[i], ':')
+        plt.plot(all_points[i], ':')
 plt.show()   

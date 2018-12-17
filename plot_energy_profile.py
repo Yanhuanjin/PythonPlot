@@ -1,24 +1,43 @@
 import matplotlib.pyplot as plt
 
-values = []   # 输入数据列表
-points = []   # 处理数据列表
-n = 1
-while True:
-    print('Please input Point-%d:' %(n))
-    point = input()
-    n = n + 1
-    if point == '':
-        print("INPUT OVER.\n")
-        break
-    else:
-        values.append(float(point))
+"""Lazy version"""
 
-for value in values:
-    for i in range(2):              # 增加一组平行的数据点集合，绘制横线段而不是单纯描点
-        points.append(value)    
+def plot_input():
+        plot_points = []
+        float_points = []
+        n = 1
+        while True:
+                print('Please input point %d:' %(n))
+                point = input()
+                n = n + 1
+                if point == '':
+                        print("INPUT OVER.\n")
+                        break
+                else:
+                        float_points.append(float(point))
+        return(float_points)
+
+def plot_line(float_points):
+        final_points = []
+        for point in float_points:
+                for i in range(2):
+                        final_points.append(point)
+        return(final_points)
+
+line_group = []
+all_points = []
+line_number = int(input("******* Energy_ploter (Lazy mode) *******\nFor further use please edit the sorce code at\nhttps://github.com/Yanhuanjin/PythonPlot\n\nHow many lines do you want to draw?\n"))
+for i in range(line_number):
+        line_group.append(i)
+        all_points.append(i)
+
 
 plt.xlabel('Reaction Coordinate')
 plt.ylabel('Energy')
 plt.xticks([])
-plt.plot(range(len(points)), points, '-')
+for i in line_group:
+        print('>> group '+ str(i+1) + " \n")
+        line_group[i] = plot_input()
+        all_points[i] = plot_line(line_group[i])
+        plt.plot(range(len(all_points[i])), all_points[i], ':')
 plt.show()   

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 
 """Lazy version"""
+log = "******* Energy_ploter (Lazy mode) *******\n For further use or Expert version, please edit the sorce code.\n https://github.com/Yanhuanjin/PythonPlot "
 
 def plot_input():
         plot_points = []
@@ -26,7 +27,7 @@ def plot_line(float_points):
 
 line_group = []
 all_points = []
-line_number = int(input("******* Energy_ploter (Lazy mode) *******\nFor further use please edit the sorce code at\nhttps://github.com/Yanhuanjin/PythonPlot\n\nHow many lines do you want to draw?\n"))
+line_number = int(input(log + "\n\nHow many lines do you want to draw?\n"))
 for i in range(line_number):
         line_group.append(i)
         all_points.append(i)
@@ -35,9 +36,11 @@ for i in range(line_number):
 plt.xlabel('Reaction Coordinate')
 plt.ylabel('Energy')
 plt.xticks([])
+
 for i in line_group:
         print('>> group '+ str(i+1) + " \n")
         line_group[i] = plot_input()
         all_points[i] = plot_line(line_group[i])
         plt.plot(all_points[i], ':')
+
 plt.show()   

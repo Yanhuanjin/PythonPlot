@@ -60,7 +60,8 @@ for i in range(number_of_line):
 plt.xlabel('Reaction Coordinate')
 plt.ylabel('Energy')
 plt.xticks([])
-color_box =['red' ,'royalblue', 'g', 'k', 'orange', 'darkturquoise', 'b', 'm']
+color_box =['tab:blue' ,'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown', 'tab:pink', 'tab:gray',
+			'tab:olive', 'tab:cyan']
 #random.shuffle(color_box)
 for i in line_group:
         print('>> group '+ str(i+1) + " \n")

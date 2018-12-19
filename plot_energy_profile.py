@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import random
+#import random
 
 
 """Lazy version"""
@@ -45,8 +45,6 @@ def horizon_line(group, color):
                         exit()
 
                         
-
-
 def plot_line(points, color, style='-'):
         plt.plot(points, color, linestyle=style)
 

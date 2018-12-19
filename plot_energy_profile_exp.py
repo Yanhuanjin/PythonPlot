@@ -19,6 +19,8 @@ def horizon_line(group, color):
                 i = i + 2
                 j = j + 1
 
+
+
 plt.xlabel('Reaction Coordinate')
 plt.ylabel('Energy')
 plt.xticks([])

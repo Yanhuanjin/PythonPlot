@@ -1,23 +1,31 @@
-# 
+# 懒人版说明（LAZY VERSION） 
 
 ## 输入数据点
 
 根据提示，输入需要描点的数据点，按回车表示结束，输入完毕再按一次回车。即可自动绘制势能面图。
 
-## 更改颜色
-`plt.plot(range(len(points)), points)`
+# 专业版说明 (EXPERT VERSION)
 
-在这句代码后面增加一个输入，代表颜色即可
+## 输入坐标  points input
+points_1 = [0.0, 0.5, -0.3, 0.015, -0.017]
 
-例如，`plt.plot(range(len(points)), points, 'r')`代表红色red，其他颜色也都可以用缩写代替。
+## 预处理  preconditioning
+group_1 = plot_line(points_1)
 
-## 更改线的形式
-- 实线：'-'
-- 虚线：'--'
-- 点划线：'-.'
-- 点线：':'
- 
-`plt.plot(range(len(points)), points, 'r--')`代表红色虚线
+## 绘点  points plot
+plt.plot(group_1, color = 'tab:blue', linestyle=':', label="a")
+
+## 绘制水平线段 plot bar
+horizon_line(points_1, 'tab:blue')
+
+## 更改线条颜色和形状，标签
+plt.plot(group_1, color='tab:blue', linestyle=':',  label="a")
+
+color = ''  # 改颜色（支持RGB, 输入[色号](https://matplotlib.org/gallery/color/named_colors.html)即可)
+
+linestyle = '' # 改线条（虚线'--' 点划线'-.' 点线':' 直线'-'）
+
+label = ''	  # 改标签
 
 
 ## 更改坐标名称

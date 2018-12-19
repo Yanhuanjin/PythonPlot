@@ -18,6 +18,9 @@ plt.plot(group_1, color = 'tab:blue', linestyle=':', label="a")
 ## 绘制水平线段 plot bar
 horizon_line(points_1, 'tab:blue')
 
+## 显示图形
+plt.show()
+
 ## 更改线条颜色和形状，标签
 plt.plot(group_1, color='tab:blue', linestyle=':',  label="a")
 

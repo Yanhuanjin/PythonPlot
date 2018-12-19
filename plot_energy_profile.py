@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 #import random
 
-
 """Lazy version"""
 
 log = "******* Energy_ploter (Lazy mode) *******\n For further use or Expert version, please edit the sorce code.\n https://github.com/Yanhuanjin/PythonPlot "

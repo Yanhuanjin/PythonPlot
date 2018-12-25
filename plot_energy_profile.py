@@ -34,9 +34,9 @@ def horizon_line(group, color):
         i=0
         j=0
 
-        while (i<= len(group)+1):
+        while (i<= len(group)*2-1):
                 try:
-                        plt.plot([i,i+1],[group[j], group[j]], color, linewidth=3.0,)
+                        plt.plot([i,i+1],[group[j], group[j]], color, linewidth=2.0,)
                         i = i + 2
                         j = j + 1
                 except IndexError:
